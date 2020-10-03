@@ -1,0 +1,115 @@
+---
+version: '2'
+services:
+
+
+  # zookeeper container is used to manage our Apache environment, generally for a distributed system.
+  # Handles most of the config, registry, and fault tolerance setup
+  zookeeper:
+    image: confluentinc/cp-zookeeper:latest
+    environment:
+      ZOOKEEPER_CLIENT_PORT: 32181
+      ZOOKEEPER_TICK_TIME: 2000
+
+    #Here we expose various ports for other containers to connect to zookeeper mainly on port: 32181
+    expose:
+      - "2181"
+      - "2888"
+      - "32181"
+      - "3888"
+    extra_hosts:
+      - "moby:127.0.0.1"
+
+  #Kakfa is our distributed messaging queue that lets us produce messages into it and read messages out.
+  kafka:
+    image: confluentinc/cp-kafka:latest
+    depends_on:
+      - zookeeper
+
+    #We connect to zookeeper on port: 32181
+    environment:
+      KAFKA_BROKER_ID: 1
+      KAFKA_ZOOKEEPER_CONNECT: zookeeper:32181
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka:29092
+      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+
+    #Expose these ports for us to write to and read from Kafka
+    expose:
+      - "9092"
+      - "29092"
+    extra_hosts:
+      - "moby:127.0.0.1"
+
+  #This is our HDFS container that allows for more persistent storage
+  cloudera:
+    image: midsw205/hadoop:0.0.2
+    hostname: cloudera
+
+
+    #We expose some ports for GUI look into our HDFS, and for the Hive metastore to peer into HDFS
+    expose:
+      - "8020" # nn
+      - "8888" # hue
+      - "9083" # hive thrift
+      - "10000" # hive jdbc
+      - "50070" # nn http
+    ports:
+      - "8888:8888"
+    extra_hosts:
+      - "moby:127.0.0.1"
+
+  #Spark container that gives us the framework to stream process and transform our data to then land it in HDFS
+  spark:
+    image: midsw205/spark-python:0.0.6
+    stdin_open: true
+    tty: true
+
+    #Add the volumes which lets us use and interact with local machine files
+    volumes:
+      - ~/w205:/w205
+    expose:
+      - "8890" #Added ports to open up a Jupyter Notebook based on my firewall rules
+      - "8888"
+    ports:
+      - "8889:8888" # 8888 conflicts with hue  
+      - "8890" # Jupyter Notebook
+      - "8890:8890" # Jupyter Notebook
+    depends_on:
+      - cloudera
+    
+    #Connecting the environment to our HDFS setup
+    environment:
+      HADOOP_NAMENODE: cloudera
+      HIVE_THRIFTSERVER: cloudera:9083
+    extra_hosts:
+      - "moby:127.0.0.1"
+    command: bash
+
+
+  #Pulling in Presto which is a query engine layer that lets us run queries on top of HDFS
+  presto:
+    image: midsw205/presto:0.0.1
+    hostname: presto
+    volumes:
+      - ~/w205:/w205
+    expose:
+      - "8080"
+    environment:
+      HIVE_THRIFTSERVER: cloudera:9083
+    extra_hosts:
+      - "moby:127.0.0.1"
+
+  #MIDS container that has many of the fundamental tools ready for us to use. Attaching volumes here as well
+  mids:
+    image: midsw205/base:0.1.9
+    stdin_open: true
+    tty: true
+    volumes:
+      - ~/w205:/w205
+    expose:
+      - "5000"
+    ports:
+      - "5000:5000"
+    extra_hosts:
+      - "moby:127.0.0.1"
+

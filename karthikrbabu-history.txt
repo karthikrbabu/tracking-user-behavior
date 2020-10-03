@@ -1,0 +1,1000 @@
+  980  ls
+  981  git status
+  982  git add p2_spark_notebook.ipynb 
+  983  git commit -m "Answering exame spread question"
+  984  git push origin dev_branch
+  985  clera
+  986  clear
+  987  git status
+  988  git add p2_spark_notebook.ipynb
+  989  git add .ipynb_checkpoints/
+  990  git status
+  991  got add p2_spark_notebook.ipynb 
+  992  git add p2_spark_notebook.ipynb 
+  993  git add .ipynb_checkpoints/
+  994  git status
+  995  git commit -m "Analysis and more questions added" 
+  996  git push origin dev_branch
+  997  ls
+  998  cat assessment_attempts.json | jq .[]["sequences"]  | less
+  999  clear
+ 1000  ls
+ 1001  cat assessment_attempts.json | jq '.' | less
+ 1002  cat assessment_attempts.json | jq {sequences: .sequences} | less
+ 1003  cat assessment_attempts.json | jq '.sequences' | less
+ 1004  cat assessment_attempts.json | jq '[]' | less
+ 1005  cat assessment_attempts.json | jq '.[]' | less
+ 1006  cat assessment_attempts.json | jq '.[].sequences' | less
+ 1007  cat assessment_attempts.json | jq '.[].sequences.questions' | less
+ 1008  docker ps
+ 1009  docker-compose exec kafka kafka-topics --create --topic assessments --partitions 1 --replication-factor 1 --if-not-exists --zookeeper zookeeper:32181
+ 1010  docker-compose exec kafka kafka-topics --create --topic sequences --partitions 1 --replication-factor 1 --if-not-exists --zookeeper zookeeper:32181
+ 1011  docker-compose exec mids bash -c "cat /w205/project-2-karthikrbabu/assessment_attempts.json | jq '.[].sequences' -c | kafkacat -P -b kafka:29092 -t sequences"
+ 1012  ls
+ 1013  git status
+ 1014  git add commands.txt 
+ 1015  git add p2_spark_notebook.ipynb 
+ 1016  git status
+ 1017  git .ipynb_checkpoints/
+ 1018  git add . .ipynb_checkpoints/
+ 1019  git status
+ 1020  git reset metastore_db/
+ 1021  git status
+ 1022  git reset derby.log 
+ 1023  git status
+ 1024  git commit -m "sleep lost trying to unroll data, but made progress"
+ 1025  git push origin dev_branch
+ 1026  ls
+ 1027  cd w205/
+ 1028  ls
+ 1029  ls -ltr
+ 1030  ls -lt
+ 1031  clear
+ 1032  docker-compose up -d
+ 1033  ls
+ 1034  cd project-2-karthikrbabu/
+ 1035  docker-compose up -d
+ 1036  docker-compose exec spark env PYSPARK_DRIVER_PYTHON=jupyter PYSPARK_DRIVER_PYTHON_OPTS='notebook --no-browser --port 8888 --ip 0.0.0.0 --allow-root --notebook-dir=/w205/' pyspark
+ 1037  vim docker-compose.yml 
+ 1038  docker-compose up -d
+ 1039  docker-compose down
+ 1040  docker-compose up -d
+ 1041  docker-compose exec spark env PYSPARK_DRIVER_PYTHON=jupyter PYSPARK_DRIVER_PYTHON_OPTS='notebook --no-browser --port 8888 --ip 0.0.0.0 --allow-root --notebook-dir=/w205/' pyspark
+ 1042  docker-compose exec spark env PYSPARK_DRIVER_PYTHON=jupyter PYSPARK_DRIVER_PYTHON_OPTS='notebook --no-browser --port 8890 --ip 0.0.0.0 --allow-root --notebook-dir=/w205/' pyspark
+ 1043  docker-compose down
+ 1044  clear
+ 1045  vim docker-compose.yml 
+ 1046  docker ps
+ 1047  docker-compose up -d
+ 1048  docker-compose exec spark env PYSPARK_DRIVER_PYTHON=jupyter PYSPARK_DRIVER_PYTHON_OPTS='notebook --no-browser --port 8890 --ip 0.0.0.0 --allow-root --notebook-dir=/w205/' pyspark
+ 1049  clear
+ 1050  ls
+ 1051  dockerps
+ 1052  docker ps
+ 1053  docker-compose down
+ 1054  clear
+ 1055  ls
+ 1056  docker ps
+ 1057  clear
+ 1058  ls
+ 1059  docker-compose up -d
+ 1060  docker-compose exec cloudera hadoop fs -ls /tmp/docker-compose exec cloudera hadoop fs -ls /tmp/
+ 1061  docker-compose exec kafka kafka-topics --create --topic assessments --partitions 1 --replication-factor 1 --if-not-exists --zookeeper zookeeper:32181
+ 1062  docker-compose exec mids bash -c "cat /w205/project-2-karthikrbabu/assessment_attempts.json | jq '.[]' -c | kafkacat -P -b kafka:29092 -t assessments"
+ 1063  docker-compose exec spark env PYSPARK_DRIVER_PYTHON=jupyter PYSPARK_DRIVER_PYTHON_OPTS='notebook --no-browser --port 8888 --ip 0.0.0.0 --allow-root --notebook-dir=/w205/' pyspark
+ 1064  clear
+ 1065  docker-compose exec spark env PYSPARK_DRIVER_PYTHON=jupyter PYSPARK_DRIVER_PYTHON_OPTS='notebook --no-browser --port 8890 --ip 0.0.0.0 --allow-root --notebook-dir=/w205/' pyspark
+ 1066  clear
+ 1067  docker-compose exec spark env PYSPARK_DRIVER_PYTHON=jupyter PYSPARK_DRIVER_PYTHON_OPTS='notebook --NotebookApp.iopub_data_rate_limit=10000000000 --no-browser --port 8890 --ip 0.0.0.0 --allow-root --notebook-dir=/w205/' pyspark
+ 1068  ls
+ 1069  cd w205/project-2-karthikrbabu/
+ 1070  git status
+ 1071  git add p2_spark_notebook.ipynb 
+ 1072  git add .ipynb_checkpoints/
+ 1073  git commit -m "Data unrolledgit add .ipynb_checkpoints/ notebook cleanup"
+ 1074  git push origin dev_branch
+ 1075  clear
+ 1076  ls
+ 1077  git status
+ 1078  git add p2_spark_notebook.ipynb 
+ 1079  git add .ipynb_checkpoints/
+ 1080  git commit -m "Notebook cleanedUp"
+ 1081  git push origin dev_branch
+ 1082  docker ps
+ 1083  docker-compose down
+ 1084  clear
+ 1085  docker ps
+ 1086  exit
+ 1087  ls
+ 1088  cd w205/project-2-karthikrbabu/
+ 1089  docker-compose up -d
+ 1090  docker-compose exec spark env PYSPARK_DRIVER_PYTHON=jupyter PYSPARK_DRIVER_PYTHON_OPTS='notebook --NotebookApp.iopub_data_rate_limit=10000000000 --no-browser --port 8890 --ip 0.0.0.0 --allow-root --notebook-dir=/w205/' pyspark
+ 1091  cd w205/project-2-karthikrbabu/
+ 1092  docker-compose up -d
+ 1093  docker-compose exec kafka kafka-topics --create --topic assessments --partitions 1 --replication-factor 1 --if-not-exists --zookeeper zookeeper:32181
+ 1094  docker-compose exec mids bash -c "cat /w205/project-2-karthikrbabu/assessment_attempts.json | jq '.[]' -c | kafkacat -P -b kafka:29092 -t assessments"
+ 1095  docker-compose exec spark env PYSPARK_DRIVER_PYTHON=jupyter PYSPARK_DRIVER_PYTHON_OPTS='notebook --NotebookApp.iopub_data_rate_limit=10000000000 --no-browser --port 8890 --ip 0.0.0.0 --allow-root --notebook-dir=/w205/' pyspark
+ 1096  ls
+ 1097  cd w205/project-2-karthikrbabu/
+ 1098  docker-compose exec cloudera hadoop fs -ls /tmp/
+ 1099  git status
+ 1100  git add plot_visuals/exam_length_hist.png 
+ 1101  git status
+ 1102  git commit -m 
+ 1103  git commit -m "difficulty analysis working on, all files and history added and cleaned"
+ 1104  git push origin dev_branch
+ 1105  clear
+ 1106  docker ps
+ 1107  docker-compose down
+ 1108  ls
+ 1109  cd w205/
+ 1110  ls
+ 1111  cd project-2-karthikrbabu/
+ 1112  ls
+ 1113  git status
+ 1114  git add commands.txt 
+ 1115  git add p2_spark_notebook.ipynb 
+ 1116  git status
+ 1117  git commit -m "Unrolled data analysis + visuals + error handling for dirty data"
+ 1118  git push origin dev_branch
+ 1119  pwd
+ 1120  cd
+ 1121  pwd
+ 1122  ls
+ 1123  cd w205/project-2-karthikrbabu/
+ 1124  git status
+ 1125  git add commands.md 
+ 1126  git add p2_spark_notebook.ipynb 
+ 1127  git commit -m "Commands annotating and notebook cleanup"
+ 1128  git push origin dev_branch
+ 1129  git add commands.md 
+ 1130  git status
+ 1131  git add .
+ 1132  clear
+ 1133  git status
+ 1134  git reset metastore_db/
+ 1135  git status
+ 1136  git reset derby.log 
+ 1137  git status
+ 1138  git add .
+ 1139  git commit -m "Commands markdown cleanup"
+ 1140  git push origin dev_branch
+ 1141  clear
+ 1142  ls
+ 1143  git status
+ 1144  git add README.md 
+ 1145  git add commands.md 
+ 1146  git commit -m "read me editting and commands cleanup"
+ 1147  git push origin dev_branch
+ 1148  git add README.md 
+ 1149  git commit -m "read me editting"
+ 1150  git push origin dev_branch
+ 1151  clear
+ 1152  ls
+ 1153  git status
+ 1154  git add README.md 
+ 1155  git rm derby.log 
+ 1156  git rm -r metastore_db/
+ 1157  clear
+ 1158  ls
+ 1159  git status
+ 1160  git rm -r .ipynb_checkpoints/
+ 1161  rm -r .ipynb_checkpoints/
+ 1162  clear
+ 1163  git status
+ 1164  git add .
+ 1165  git commit -m "repo cleanup"
+ 1166  git push origin dev_branch
+ 1167  clear
+ 1168  ls
+ 1169  docker ps
+ 1170  docker-compose down
+ 1171  clear
+ 1172  ls
+ 1173  rm -r metastore_db/
+ 1174  sudo rm -r metastore_db/
+ 1175  clera
+ 1176  cler
+ 1177  clear
+ 1178  ls
+ 1179  git status
+ 1180  git add .
+ 1181  git commit -m "meta_store deleted"
+ 1182  git push origin dev_branch
+ 1183  docker ps
+ 1184  ls
+ 1185  cd w205/
+ 1186  cd project-2-karthikrbabu/
+ 1187  docker-compose up -d
+ 1188  docker-compose exec kafka kafka-topics --create --topic assessments --partitions 1 --replication-factor 1 --if-not-exists --zookeeper zookeeper:32181
+ 1189  docker-compose exec mids bash -c "cat /w205/project-2-karthikrbabu/assessment_attempts.json | jq '.[]' -c | kafkacat -P -b kafka:29092 -t assessments"
+ 1190  docker-compose exec spark env PYSPARK_DRIVER_PYTHON=jupyter PYSPARK_DRIVER_PYTHON_OPTS='notebook --NotebookApp.iopub_data_rate_limit=10000000000 --no-browser --port 8890 --ip 0.0.0.0 --allow-root --notebook-dir=/w205/' pyspark
+ 1191  ls
+ 1192  cdd w205/project-2-karthikrbabu/
+ 1193  ls
+ 1194  cd w205/project-2-karthikrbabu/
+ 1195  ls
+ 1196  docker ps
+ 1197  docker-compose down
+ 1198  clear
+ 1199  docker-compose up -d
+ 1200  docker-compose exec kafka kafka-topics --create --topic assessments --partitions 1 --replication-factor 1 --if-not-exists --zookeeper zookeeper:32181 && echo 'Created Assessments'
+ 1201  docker-compose exec kafka kafka-topics --create --topic assessments --partitions 1 --replication-factor 1 --if-not-exists --zookeeper zookeeper:32181
+ 1202  docker-compose exec mids bash -c "cat /w205/project-2-karthikrbabu/assessment_attempts.json | jq '.[]' -c | kafkacat -P -b kafka:29092 -t assessments"
+ 1203  docker-compose exec spark env PYSPARK_DRIVER_PYTHON=jupyter PYSPARK_DRIVER_PYTHON_OPTS='notebook --NotebookApp.iopub_data_rate_limit=10000000000 --no-browser --port 8890 --ip 0.0.0.0 --allow-root --notebook-dir=/w205/' pyspark
+ 1204  clear
+ 1205  ls
+ 1206  pwd
+ 1207  c
+ 1208  cd
+ 1209  ls
+ 1210  cd w205/
+ 1211  ls
+ 1212  cd project-2-karthikrbabu/
+ 1213  ls
+ 1214  vim docker-compose.yml 
+ 1215  docker-compose exec spark env PYSPARK_DRIVER_PYTHON=jupyter PYSPARK_DRIVER_PYTHON_OPTS='notebook --NotebookApp.iopub_data_rate_limit=10000000000 --no-browser --port 8890 --ip 0.0.0.0 --allow-root --notebook-dir=/w205/' pyspark
+ 1216  clear
+ 1217  ls
+ 1218  docker ps
+ 1219  clear
+ 1220  ls
+ 1221  docker ps
+ 1222  ls
+ 1223  docker-compose up -d
+ 1224  docker-compose exec kafka kafka-topics --create --topic assessments --partitions 1 --replication-factor 1 --if-not-exists --zookeeper zookeeper:32181
+ 1225  docker-compose exec mids bash -c "cat /w205/project-2-karthikrbabu/assessment_attempts.json | jq '.[]' -c | kafkacat -P -b kafka:29092 -t assessments"
+ 1226  docker-compose exec spark env PYSPARK_DRIVER_PYTHON=jupyter PYSPARK_DRIVER_PYTHON_OPTS='notebook --NotebookApp.iopub_data_rate_limit=10000000000 --no-browser --port 8890 --ip 0.0.0.0 --allow-root --notebook-dir=/w205/' pyspark
+ 1227  docker-compose exec cloudera hadoop fs -ls /tmp/
+ 1228  ls
+ 1229  history > karthikrbabu-history.txt
+ 1230  clear
+ 1231  ls
+ 1232  cat karthikrbabu-history.txt | less
+ 1233  clear
+ 1234  ls
+ 1235  git status
+ 1236  git add README.md 
+ 1237  git add commands.md 
+ 1238  git add p2_spark_notebook.ipynb 
+ 1239  git add karthikrbabu-history.txt 
+ 1240  git add plot_visuals/
+ 1241  docker-compose exec spark env PYSPARK_DRIVER_PYTHON=jupyter PYSPARK_DRIVER_PYTHON_OPTS='notebook --NotebookApp.iopub_data_rate_limit=10000000000 --no-browser --port 8890 --ip 0.0.0.0 --allow-root --notebook-dir=/w205/' pyspark
+ 1242  clear
+ 1243  ls
+ 1244  git status
+ 1245  git commands.md 
+ 1246  git commit -m 'commands edit'
+ 1247  git status
+ 1248  git add commands.md 
+ 1249  git commit -m "commands edits"
+ 1250  git push origin dev_branch
+ 1251  clear
+ 1252  docker ps
+ 1253  ls
+ 1254  cd w205/
+ 1255  ls
+ 1256  cd project-2-karthikrbabu/
+ 1257  ls
+ 1258  docker-compose up -d
+ 1259  docker-compose exec kafka kafka-topics --create --topic assessments --partitions 1 --replication-factor 1 --if-not-exists --zookeeper zookeeper:32181
+ 1260  clear
+ 1261  docker ps
+ 1262  docker-compose exec kafka kafka-topics --create --topic assessments --partitions 1 --replication-factor 1 --if-not-exists --zookeeper zookeeper:32181
+ 1263  docker-compose exec mids bash -c "cat /w205/project-2-karthikrbabu/assessment_attempts.json | jq '.[]' -c | kafkacat -P -b kafka:29092 -t assessments"
+ 1264  docker-compose exec spark env PYSPARK_DRIVER_PYTHON=jupyter PYSPARK_DRIVER_PYTHON_OPTS='notebook --NotebookApp.iopub_data_rate_limit=10000000000 --no-browser --port 8890 --ip 0.0.0.0 --allow-root --notebook-dir=/w205/' pyspark
+ 1265  git statu
+ 1266  git status
+ 1267  ls
+ 1268  cd w205/
+ 1269  ls
+ 1270  cd project-2-karthikrbabu/
+ 1271  ls
+ 1272  git status
+ 1273  git add README.md 
+ 1274  git add p2_spark_notebook.ipynb 
+ 1275  git add plot_visuals/exams_taken_hist.png 
+ 1276  git status
+ 1277  git commit -m "README additions, screenshot added, and most difficult exam analysis complete with graphs"
+ 1278  git push origin dev_branch
+ 1279  clear
+ 1280  git status
+ 1281  git add README.md 
+ 1282  git commit -m "README cleaned up"
+ 1283  git push origin dev_branch
+ 1284  clear
+ 1285  git status
+ 1286  git add README.md 
+ 1287  git add docker-compose.yml 
+ 1288  git commit -m "comments on docker.yml file and readme"
+ 1289  git push origin dev_branch
+ 1290  clear
+ 1291  ls
+ 1292  git status
+ 1293  git add README.md 
+ 1294  git add commands.md 
+ 1295  git commit -m "Cleanup and comments"
+ 1296  git push origin dev_branch
+ 1297  clear
+ 1298  ls
+ 1299  git status
+ 1300  docker-compose down
+ 1301  docker ps
+ 1302  clear
+ 1303  ls
+ 1304  docker-compose up -
+ 1305  docker-compose up -d
+ 1306  docker-compose exec kafka kafka-topics --create --topic assessments --partitions 1 --replication-factor 1 --if-not-exists --zookeeper zookeeper:32181
+ 1307  docker-compose exec mids bash -c "cat /w205/project-2-karthikrbabu/assessment_attempts.json | jq '.[]' -c | kafkacat -P -b kafka:29092 -t assessments"
+ 1308  docker-compose exec spark env PYSPARK_DRIVER_PYTHON=jupyter PYSPARK_DRIVER_PYTHON_OPTS='notebook --NotebookApp.iopub_data_rate_limit=10000000000 --no-browser --port 8890 --ip 0.0.0.0 --allow-root --notebook-dir=/w205/' pyspark
+ 1309  clear
+ 1310  git status
+ 1311  git add p2_spark_notebook.ipynb 
+ 1312  git commit -m "cleanup, gotta revisit the difficulty calculation" 
+ 1313  git push origin dev_branch
+ 1314  ls
+ 1315  cd w205/
+ 1316  ls
+ 1317  cd project-2-karthikrbabu/
+ 1318  ls
+ 1319  docker-compose up -d
+ 1320  docker-compose exec kafka kafka-topics --create --topic assessments --partitions 1 --replication-factor 1 --if-not-exists --zookeeper zookeeper:32181
+ 1321  docker-compose exec mids bash -c "cat /w205/project-2-karthikrbabu/assessment_attempts.json | jq '.[]' -c | kafkacat -P -b kafka:29092 -t assessments"
+ 1322  ls
+ 1323  docker-compose exec mids bash -c "cat /w205/project-2-karthikrbabu/assessment_attempts.json | jq '.[]' -c | kafkacat -P -b kafka:29092 -t assessments"
+ 1324  clear
+ 1325  docker ps
+ 1326  docker-compose ps
+ 1327  docker-compose down
+ 1328  clear
+ 1329  ls
+ 1330  docker-compose up -d
+ 1331  docker-compose logs -f kafka
+ 1332  clear
+ 1333  docker-compose exec kafka kafka-topics --create --topic assessments --partitions 1 --replication-factor 1 --if-not-exists --zookeeper zookeeper:32181
+ 1334  docker-compose exec mids bash -c "cat /w205/project-2-karthikrbabu/assessment_attempts.json | jq '.[]' -c | kafkacat -P -b kafka:29092 -t assessments"
+ 1335  docker-compose exec spark env PYSPARK_DRIVER_PYTHON=jupyter PYSPARK_DRIVER_PYTHON_OPTS='notebook --NotebookApp.iopub_data_rate_limit=10000000000 --no-browser --port 8890 --ip 0.0.0.0 --allow-root --notebook-dir=/w205/' pyspark
+ 1336  clerar
+ 1337  clear
+ 1338  ls
+ 1339  docker ps
+ 1340  docker-compose down
+ 1341  clear
+ 1342  ls
+ 1343  docker ps
+ 1344  cd w205/flask-with-kafka-and-spark/
+ 1345  docker-compose exec mids kafkacat -C -b kafka:29092 -t events -o beginning -e
+ 1346  vim game_api_with_extended_json_events.py 
+ 1347  ls
+ 1348  vim game_api_with_extended_json_events.py 
+ 1349  docker-compose exec mids env FLASK_APP=/w205/flask-with-kafka-and-spark/game_api_with_extended_json_events.py flask run --host 0.0.0.0
+ 1350  cd w205/flask-with-kafka-and-spark/
+ 1351  docker-compose exec mids curl http://localhost:5000/
+ 1352  docker-compose exec mids curl http://localhost:5000/purchase_a_sword
+ 1353  docker psdocker-compose exec mids curl http://localhost:5000/purchase_a_sword
+ 1354  docker-compose exec mids curl http://localhost:5000/purchase_a_sword
+ 1355  docker-compose exec mids curl http://localhost:5000/purchase_a_frog
+ 1356  ls
+ 1357  cd w205/
+ 1358  ls
+ 1359  cd project-2-karthikrbabu/
+ 1360  docker-compose up -d
+ 1361  docker-compose exec kafka kafka-topics --create --topic assessments --partitions 1 --replication-factor 1 --if-not-exists --zookeeper zookeeper:32181
+ 1362  docker psdocker-compose exec mids bash -c "cat /w205/project-2-karthikrbabu/assessment_attempts.json | jq '.[]' -c | kafkacat -P -b kafka:29092 -t assessments"
+ 1363  docker-compose exec mids bash -c "cat /w205/project-2-karthikrbabu/assessment_attempts.json | jq '.[]' -c | kafkacat -P -b kafka:29092 -t assessments"
+ 1364  docker-compose exec spark env PYSPARK_DRIVER_PYTHON=jupyter PYSPARK_DRIVER_PYTHON_OPTS='notebook --NotebookApp.iopub_data_rate_limit=10000000000 --no-browser --port 8890 --ip 0.0.0.0 --allow-root --notebook-dir=/w205/' pyspark
+ 1365  clear
+ 1366  ls
+ 1367  docker ps
+ 1368  docker-compose down
+ 1369  clear
+ 1370  ls
+ 1371  cd 
+ 1372  cd
+ 1373  ls
+ 1374  cd w205/
+ 1375  l
+ 1376  ls
+ 1377  cd flask-with-kafka-and-spark/
+ 1378  clear
+ 1379  ls
+ 1380  docker ps
+ 1381  docker-compose down
+ 1382  clear
+ 1383  docker-compose up -d
+ 1384  docker-compose exec kafka kafka-topics --create --topic events --partitions 1 --replication-factor 1 --if-not-exists --zookeeper zookeeper:32181
+ 1385  ls
+ 1386  vim game_api_with_json_events.py 
+ 1387  docker-compose exec mids env FLASK_APP=/w205/flask-with-kafka-and-spark/game_api_with_json_events.py flask run --host 0.0.0.0
+ 1388  docker-compose down
+ 1389  docker-compose up -d
+ 1390  docker-compose exec kafka kafka-topics --create --topic events --partitions 1 --replication-factor 1 --if-not-exists --zookeeper zookeeper:32181
+ 1391  clear
+ 1392  docker-compose exec kafka kafka-topics --create --topic events --partitions 1 --replication-factor 1 --if-not-exists --zookeeper zookeeper:32181
+ 1393  clear
+ 1394  ls
+ 1395  docker-compose exec mids kafkacat -C -b kafka:29092 -t events -o beginning -e
+ 1396  docker-compose exec spark pyspark
+ 1397  clearls
+ 1398  ls
+ 1399  clear
+ 1400  docker ps
+ 1401  docker-compose down
+ 1402  clear
+ 1403  ls
+ 1404  docker-compose ps
+ 1405  docker ps
+ 1406  clear
+ 1407  cd 
+ 1408  cd w205/
+ 1409  ls
+ 1410  cd project-2-karthikrbabu/
+ 1411  ls
+ 1412  docker ps
+ 1413  docker compose up -d
+ 1414  docker-compose up -d
+ 1415  docker-compose exec kafka kafka-topics --create --topic assessments --partitions 1 --replication-factor 1 --if-not-exists --zookeeper zookeeper:32181
+ 1416  docker-compose exec mids bash -c "cat /w205/project-2-karthikrbabu/assessment_attempts.json | jq '.[]' -c | kafkacat -P -b kafka:29092 -t assessments"
+ 1417  docker-compose exec spark env PYSPARK_DRIVER_PYTHON=jupyter PYSPARK_DRIVER_PYTHON_OPTS='notebook --NotebookApp.iopub_data_rate_limit=10000000000 --no-browser --port 8890 --ip 0.0.0.0 --allow-root --notebook-dir=/w205/' pyspark
+ 1418  docker-compose down
+ 1419  clear
+ 1420  docker compose up -d
+ 1421  docker-compose up -d
+ 1422  docker-compose exec kafka kafka-topics --create --topic assessments --partitions 1 --replication-factor 1 --if-not-exists --zookeeper zookeeper:32181
+ 1423  docker-compose exec mids bash -c "cat /w205/project-2-karthikrbabu/assessment_attempts.json | jq '.[]' -c | kafkacat -P -b kafka:29092 -t assessments"
+ 1424  docker-compose exec spark env PYSPARK_DRIVER_PYTHON=jupyter PYSPARK_DRIVER_PYTHON_OPTS='notebook --NotebookApp.iopub_data_rate_limit=10000000000 --no-browser --port 8890 --ip 0.0.0.0 --allow-root --notebook-dir=/w205/' pyspark
+ 1425  history > karthikrbabu-history.txt
+ 1426  clear
+ 1427  git status
+ 1428  git add karthikrbabu-history.txt 
+ 1429  git add plot_visuals/exam_scores_hists.png 
+ 1430  got add p2_spark_notebook.ipynb 
+ 1431  git add p2_spark_notebook.ipynb 
+ 1432  git status
+ 1433  git commit -m "project anaylsis done and comments editted"
+ 1434  git push origin dev_branch
+ 1435  clear
+ 1436  ls
+ 1437  docker-compose exec spark env PYSPARK_DRIVER_PYTHON=jupyter PYSPARK_DRIVER_PYTHON_OPTS='notebook --NotebookApp.iopub_data_rate_limit=10000000000 --no-browser --port 8890 --ip 0.0.0.0 --allow-root --notebook-dir=/w205/' pyspark
+ 1438  git status
+ 1439  git add p2_spark_notebook.ipynb 
+ 1440  git commit -m "notebook comments"
+ 1441  git push origin dev_branc
+ 1442  git push origin dev_branch
+ 1443  git pull origin dev_branch
+ 1444  clear
+ 1445  ls
+ 1446  git add .
+ 1447  git commit -m "merged master"
+ 1448  git status
+ 1449  git reset metastore_db/
+ 1450  git reset plot_visuals/.ipynb_checkpoints/exam_length_hist-checkpoint.png 
+ 1451  git reset derby.log 
+ 1452  git reset .ipynb_checkpoints/
+ 1453  git status
+ 1454  git commit -m "merged master"
+ 1455  git push origin dev_branch
+ 1456  clear
+ 1457  ls
+ 1458  rm -r metastore_db/
+ 1459  sudo rm -r metastore_db/
+ 1460  ls
+ 1461  rm -r derby.log 
+ 1462  rm -r .ipynb_checkpoints/
+ 1463  y
+ 1464  git status
+ 1465  git add .
+ 1466  git commit -m "cleanup"
+ 1467  git push origin dev_branch
+ 1468  l
+ 1469  ls
+ 1470  cd w205/
+ 1471  ls
+ 1472  git clone  https://github.com/mids-w205-schioberg/project-3-karthikrbabu.git
+ 1473  l
+ 1474  ls
+ 1475  cd project-3-karthikrbabu/
+ 1476  ls
+ 1477  clear
+ 1478  ls
+ 1479  cd ..
+ 1480  ls
+ 1481  ls -ltr
+ 1482  ls -lt
+ 1483  mkdir ~/w205/flask-with-kafka-and-spark/
+ 1484  ls -ltr
+ 1485  clear
+ 1486  cd ~/w205/flask-with-kafka-and-spark/
+ 1487  cp ~/w205/course-content/10-Transforming-Streaming-Data/docker-compose.yml .
+ 1488  clear
+ 1489  ls
+ 1490  cp ../course-content/10-Transforming-Streaming-Data/*.py .
+ 1491  ls
+ 1492  docker-compose up -d
+ 1493  ls
+ 1494  cd w205/
+ 1495  ls
+ 1496  cd project-2-karthikrbabu/
+ 1497  ls
+ 1498  docker-compose up -d
+ 1499  docker-compose exec kafka kafka-topics --create --topic assessments --partitions 1 --replication-factor 1 --if-not-exists --zookeeper zookeeper:32181
+ 1500  docker-compose exec mids bash -c "cat /w205/project-2-karthikrbabu/assessment_attempts.json | jq '.[]' -c | kafkacat -P -b kafka:29092 -t assessments"
+ 1501  docker-compose exec kafka kafka-topics --create --topic assessments --partitions 1 --replication-factor 1 --if-not-exists --zookeeper zookeeper:32181
+ 1502  docker-compose exec mids bash -c "cat /w205/project-2-karthikrbabu/assessment_attempts.json | jq '.[]' -c | kafkacat -P -b kafka:29092 -t assessments"
+ 1503  docker-compose down
+ 1504  clear
+ 1505  docker ps
+ 1506  docker-compose up -d
+ 1507  docker-compose logs -f kafka
+ 1508  cler
+ 1509  clear
+ 1510  docker-compose exec kafka kafka-topics --create --topic assessments --partitions 1 --replication-factor 1 --if-not-exists --zookeeper zookeeper:32181
+ 1511  docker-compose exec mids bash -c "cat /w205/project-2-karthikrbabu/assessment_attempts.json | jq '.[]' -c | kafkacat -P -b kafka:29092 -t assessments"
+ 1512  parse error: Unfinished string at EOF at line 1curl -L -o assessment-attempts-20180128-121051-nested.json https://goo.gl/ME6hjp
+ 1513  clear
+ 1514  ls
+ 1515  curl -L -o assessment-attempts-20180128-121051-nested.json https://goo.gl/ME6hjp
+ 1516  ls
+ 1517  mv assessment-attempts-20180128-121051-nested.json assessment_attempts.json
+ 1518  ls
+ 1519  docker-compose exec mids bash -c "cat /w205/project-2-karthikrbabu/assessment_attempts.json | jq '.[]' -c | kafkacat -P -b kafka:29092 -t assessments"
+ 1520  docker-compose exec spark env PYSPARK_DRIVER_PYTHON=jupyter PYSPARK_DRIVER_PYTHON_OPTS='notebook --NotebookApp.iopub_data_rate_limit=10000000000 --no-browser --port 8890 --ip 0.0.0.0 --allow-root --notebook-dir=/w205/' pyspark
+ 1521  docker-compose down
+ 1522  docker ps
+ 1523  docker-compose up -d
+ 1524  cleaclear
+ 1525  docker-compose exec kafka kafka-topics --create --topic assessments --partitions 1 --replication-factor 1 --if-not-exists --zookeeper zookeeper:32181
+ 1526  clear
+ 1527  docker-compose exec mids bash -c "cat /w205/project-2-karthikrbabu/assessment_attempts.json | jq '.[]' -c | kafkacat -P -b kafka:29092 -t assessments"
+ 1528  docker-compose exec spark env PYSPARK_DRIVER_PYTHON=jupyter PYSPARK_DRIVER_PYTHON_OPTS='notebook --NotebookApp.iopub_data_rate_limit=10000000000 --no-browser --port 8890 --ip 0.0.0.0 --allow-root --notebook-dir=/w205/' pyspark
+ 1529  clear
+ 1530  ls
+ 1531  git status
+ 1532  git add README.md 
+ 1533  git add p2_spark_notebook.ipynb 
+ 1534  git status
+ 1535  git commit -m "final project tweaks"
+ 1536  git push origin dev_branch
+ 1537  ls
+ 1538  clear
+ 1539  l
+ 1540  ls
+ 1541  exit
+ 1542  ls
+ 1543  cd w205/
+ 1544  ls
+ 1545  ls -ltr
+ 1546  mkdir spark-from-files
+ 1547  cd spark-
+ 1548  cd spark-from-files/
+ 1549  cp ../course-content/11-Storing-Data-III/docker-compose.yml 
+ 1550  cp ../course-content/11-Storing-Data-III/docker-compose.yml .
+ 1551  cp ~/w205/course-content/11-Storing-Data-III/*.py .
+ 1552  clear
+ 1553  ls
+ 1554  clear
+ 1555  docker-compose up -d
+ 1556  docker-compose exec kafka kafka-topics --create --topic events --partitions 1 --replication-factor 1 --if-not-exists --zookeeper zookeeper:32181
+ 1557  clear
+ 1558  ls
+ 1559  vim game_api.py 
+ 1560  clear
+ 1561  docker-compose exec mids env FLASK_APP=/w205/spark-from-files/game_api.py flask run --host 0.0.0.0
+ 1562  cd w205/spark-from-files/
+ 1563  clear
+ 1564  docker-compose exec mids kafkacat -C -b kafka:29092 -t events -o beginning -e
+ 1565  ls
+ 1566  vim extract_events.py 
+ 1567  docker-compose exec spark spark-submit /w205/spark-from-files/extract_events.py
+ 1568  clear
+ 1569  clera
+ 1570  clear
+ 1571  ls
+ 1572  vim transform_events.py 
+ 1573  ls
+ 1574  vim separate_events.py 
+ 1575  docker-compose exec spark spark-submit /w205/spark-from-files/separate_events.py
+ 1576  vim separate_events.py 
+ 1577  cp ../course-content/12-Querying-Data-II/*.py .
+ 1578  clear
+ 1579  ls
+ 1580  vim filtered_writes.py 
+ 1581  clear
+ 1582  ls
+ 1583  docker-compose exec mids ab -n 10 -H "Host: user1.comcast.com" http://localhost:5000/
+ 1584  docker-compose exec mids ab -n 10 -H "Host: user1.comcast.com" http://localhost:5000/purchase_a_sword
+ 1585  docker-compose exec mids ab -n 10 -H "Host: user2.att.com" http://localhost:5000/
+ 1586  docker-compose exec mids ab -n 10 -H "Host: user2.att.com" http://localhost:5000/purchase_a_sword
+ 1587  clear
+ 1588  docker-compose exec mids kafkacat -C -b kafka:29092 -t events -o beginning -e
+ 1589  docker-compose exec spark spark-submit /w205/spark-from-files/separate_events.py
+ 1590  clear
+ 1591  docker compose down
+ 1592  docker-compose down
+ 1593  cd w205/spark-from-files/
+ 1594  clear
+ 1595  docker-compose exec mids curl http://localhost:5000/purchase_a_sword
+ 1596  docker-compose exec mids curl http://localhost:5000/
+ 1597  ls
+ 1598  mkdir ~/w205/full-stack2/
+ 1599  ls
+ 1600  cd ~/w205/full-stack2
+ 1601  cp ~/w205/course-content/13-Understanding-Data/docker-compose.yml .
+ 1602  docker-compose pull
+ 1603  cp ~/w205/course-content/13-Understanding-Data/*.py .
+ 1604  clear
+ 1605  pwd
+ 1606  docker-compose up -d
+ 1607  ls
+ 1608  cd ..
+ 1609  ls
+ 1610  cd full-stack2/
+ 1611  clear
+ 1612  ls
+ 1613  vim game_api.py 
+ 1614  ls
+ 1615  flask run
+ 1616  clear
+ 1617  docker-compose exec mids env FLASK_APP=/w205/full-stack2/game_api.py flask run --host 0.0.0.0
+ 1618  cd /home/jupyter/w205/full-stack2
+ 1619  docker-compose exec mids ab -n 10 -H "Host: user1.comcast.com" http://localhost:5000/
+ 1620  docker-compose exec mids ab -n 1000 -H "Host: user1.comcast.com" http://localhost:5000/
+ 1621  docker-compose exec mids ab -n 10 -H "Host: user1.comcast.com" http://localhost:5000/purchase_a_sword
+ 1622  docker-compose exec mids ab -n 1000 -H "Host: user1.comcast.com" http://localhost:5000/purchase_a_sword
+ 1623  clear
+ 1624  while true; do docker-compose exec mids ab -n 10 -H "Host: user1.comcast.com" http://localhost:5000/purchase_a_sword; sleep 10; done
+ 1625  ls
+ 1626  vim ab.sh 
+ 1627  ls
+ 1628  vim ab.sh 
+ 1629  clear
+ 1630  ls
+ 1631  vim sample_echo.sh
+ 1632  ls
+ 1633  ./ sample_echo.sh 
+ 1634  ./sample_echo.sh 
+ 1635  sudo su
+ 1636  clear
+ 1637  ls
+ 1638  chmod +x sample_echo.sh 
+ 1639  ls
+ 1640  ./sample_echo.sh 
+ 1641  chmod +x ab.sh
+ 1642  ls
+ 1643  docker-compose down
+ 1644  docker p
+ 1645  docker ps
+ 1646  clear
+ 1647  cd /home/jupyter/w205/full-stack2
+ 1648  ls
+ 1649  cd ../spark-from-files/
+ 1650  ls
+ 1651  cd ../full-stack2/
+ 1652  vim ab.sh
+ 1653  clear
+ 1654  ls
+ 1655  ./ab.sh
+ 1656  ls -a
+ 1657  clear
+ 1658  ls
+ 1659  docker-compose exec mids ab -n 10 -H "Host: user1.comcast.com" http://localhost:5000/
+ 1660  docker-compose exec mids ab -n 10 -H "Host: user1.comcast.com" http://localhost:5000/purchase_a_sword
+ 1661  docker-compose exec mids ab -n 10 -H "Host: user2.att.com" http://localhost:5000/
+ 1662  docker-compose exec mids ab -n 10 -H "Host: user2.att.com" http://localhost:5000/purchase_a_sword
+ 1663  clear
+ 1664  ls
+ 1665  ls -a
+ 1666  ls -l
+ 1667  docker-compose exec spark spark-submit /w205/full-stack2/filtered_writes.py
+ 1668  docker-compose exec cloudera hadoop fs -ls /tmp/purchases/
+ 1669  clear
+ 1670  ls
+ 1671  vim write_hive_table.py 
+ 1672  docker-compose exec spark spark-submit /w205/full-stack2/write_hive_table.py
+ 1673  docker-compose exec cloudera hadoop fs -ls /tmp/
+ 1674  clear
+ 1675  docker-compose exec presto presto --server presto:8080 --catalog hive --schema default
+ 1676  clear
+ 1677  docker-compose exec spark spark-submit /w205/full-stack2/filter_swords_stream.py
+ 1678  clear
+ 1679  ls
+ 1680  docker-compose exec spark spark-submit /w205/full-stack2/filter_swords_batch.py
+ 1681  docker-compose exec spark spark-submit /w205/full-stack2/filter_swords_stream.py
+ 1682  clear
+ 1683  docker-compose exec spark spark-submit /w205/full-stack2/filter_swords_stream.py
+ 1684  clear
+ 1685  while true; do docker-compose exec mids ab -n 10 -H "Host: user1.comcast.com" http://localhost:5000/purchase_a_sword; sleep 10; done
+ 1686  clear
+ 1687  docker-compose exec spark spark-submit /w205/full-stack2/write_swords_stream.py
+ 1688  cd /home/jupyter/w205/full-stack2
+ 1689  docker-compose exec mids kafkacat -C -b kafka:29092 -t events -o beginning
+ 1690  clear
+ 1691  docker-compose exec cloudera hadoop fs -ls /tmp/sword_purchases
+ 1692  ls
+ 1693  cd w205/
+ 1694  ls
+ 1695  cd project-3-karthikrbabu/
+ 1696  ls
+ 1697  ls
+ 1698  cd w205/project-3-karthikrbabu/
+ 1699  ls
+ 1700  cp ../course-content/14-Patterns-for-Data-Pipelines/docker-compose.yml .
+ 1701  ls
+ 1702  vim docker-compose.yml 
+ 1703  clear
+ 1704  ls
+ 1705  cp ../course-content/14-Patterns-for-Data-Pipelines/game_api.py 
+ 1706  cp ../course-content/14-Patterns-for-Data-Pipelines/game_api.py .
+ 1707  clear
+ 1708  ls
+ 1709  git status
+ 1710  git add .
+ 1711  git commit -m "Added docker-compose set up with kafka, zookeeper, spark, hadoop, presto, mids and game_apis"
+ 1712  git branch 
+ 1713  git checkout -b dev_branch
+ 1714  clear
+ 1715  ls
+ 1716  git brancj
+ 1717  git branch
+ 1718  ls
+ 1719  cat docker-compose.yml 
+ 1720  clear
+ 1721  ls
+ 1722  git status
+ 1723  git commit "added docker compose file with mids, spark, presto, hadoop, hive, kafka"
+ 1724  git commit -m "added docker compose file with mids, spark, presto, hadoop, hive, kafka"
+ 1725  git add .
+ 1726  git commit -m "added docker compose file with mids, spark, presto, hadoop, hive, kafka"
+ 1727  git push origin dev_branch
+ 1728  clear
+ 1729  git branch
+ 1730  clear
+ 1731  ls
+ 1732  cp ../course-content/14-Patterns-for-Data-Pipelines/write_swords_stream.py .
+ 1733  mv write_swords_stream.py write_events_stream.py
+ 1734  clear
+ 1735  ls
+ 1736  git branch
+ 1737  git status
+ 1738  git add .
+ 1739  git commit -m "Added spark streaming flow, modified namings"
+ 1740  git push origin dev_branch
+ 1741  clear
+ 1742  ls
+ 1743  cp ../full-stack2/ab.sh .
+ 1744  ls
+ 1745  vim write_events_stream.py 
+ 1746  ls
+ 1747  cp ../full-stack2/write_hive_table.py .
+ 1748  ls
+ 1749  cd request_objects/
+ 1750  ls
+ 1751  vim copper_sword.json 
+ 1752  ls
+ 1753  mv copper_sword-Copy1.json gold_sword.json
+ 1754  ls
+ 1755  vim gold_sword.json 
+ 1756  ls
+ 1757  mv copper_sword-Copy2.json 
+ 1758  mv copper_sword-Copy2.json cali_guild.json
+ 1759  ls
+ 1760  vim cali_guild.json 
+ 1761  vim copper_sword-Copy3.json 
+ 1762  mv copper_sword-Copy3.json ny_guild.json
+ 1763  clear
+ 1764  ls
+ 1765  cd ..
+ 1766  ls
+ 1767  git status
+ 1768  git add .
+ 1769  git commit -m "Add soem apache bench scripts, and some json request objects, hive writing setup"
+ 1770  git push origin dev_branch
+ 1771  clear
+ 1772  docker-compose exec spark spark-submit /w205/project-3-karthikrbabu/write_hive_table.py
+ 1773  cd w205/project-3-karthikrbabu/
+ 1774  docker-compose exec spark spark-submit /w205/project-3-karthikrbabu/write_hive_table.py
+ 1775  clear
+ 1776  docker-compose exec spark spark-submit /w205/project-3-karthikrbabu/write_hive_table.py
+ 1777  clear
+ 1778  docker-compose exec presto presto --server presto:8080 --catalog hive --schema default
+ 1779  docker-compose exec cloudera hive
+ 1780  cd w205/project-3-karthikrbabu/
+ 1781  git status
+ 1782  git add .
+ 1783  git commit -m "many changes?
+ 1784  "
+ 1785  git push origin master 
+ 1786  git push origin dev_branch
+ 1787  git commit -m "changes"
+ 1788  git add .
+ 1789  clear
+ 1790  git status
+ 1791  cd w205/project-3-karthikrbabu/
+ 1792  docker-compose exec spark spark-submit /w205/project-3-karthikrbabu/write_hive_table.py
+ 1793  docker-compose exec presto presto --server presto:8080 --catalog hive --schema default
+ 1794  docker-compose exec spark env PYSPARK_DRIVER_PYTHON=jupyter PYSPARK_DRIVER_PYTHON_OPTS='notebook --no-browser --port 8890 --ip 0.0.0.0 --allow-root --notebook-dir=/w205/' pyspark
+ 1795  ls
+ 1796  cd w205/
+ 1797  ls
+ 1798  cd project-3-karthikrbabu/
+ 1799  docker-compose exec mids kafkacat -C -b kafka:29092 -t game_events -o beginning
+ 1800  cd w205/project-3-karthikrbabu/
+ 1801  docker-compose exec spark spark-submit /w205/project-3-karthikrbabu/write_events_stream.py
+ 1802  clear
+ 1803  docker-compose exec cloudera hadoop fs -ls /tmp/sword_purchases
+ 1804  docker-compose exec cloudera hadoop fs -ls /tmp/purchase_events
+ 1805  docker-compose exec cloudera hadoop fs -cat /tmp/purchase_events/part-00000-8d178f18-9f3b-48ba-be23-a9dbda564cd3-c000.snappy.parquet
+ 1806  clear
+ 1807  cd w205/project-3-karthikrbabu/
+ 1808  sh complex_ab_infinite.sh
+ 1809  cd w205/project-3-karthikrbabu/
+ 1810  ls
+ 1811  cd w205/project-3-karthikrbabu/
+ 1812  ls
+ 1813  git status
+ 1814  got add basic_ab.sh 
+ 1815  git add basic_ab.sh 
+ 1816  git add complex_ab_infinite.sh 
+ 1817  sudo su
+ 1818  ls
+ 1819  clear
+ 1820  docker-compose up -d
+ 1821  clear
+ 1822  docker-compose exec mids env FLASK_APP=/w205/project-3-karthikrbabu/game_api.py flask run --host 0.0.0.0
+ 1823  clear
+ 1824  docker-compose exec mids env FLASK_APP=/w205/project-3-karthikrbabu/game_api.py flask run --host 0.0.0.0
+ 1825  clear
+ 1826  ls
+ 1827  git status
+ 1828  git add .
+ 1829  sudo su
+ 1830  ls
+ 1831  cd w205/
+ 1832  cd project-3-karthikrbabu/
+ 1833  ls
+ 1834  sudo su
+ 1835  cd w205/project-3-karthikrbabu/
+ 1836  docker-compose exec mids env FLASK_APP=/w205/project-3-karthikrbabu/flask/game_api.py flask run --host 0.0.0.0
+ 1837  docker-compose exec mids env FLASK_APP=/w205/project-3-karthikrbabu/game_api.py flask run --host 0.0.0.0
+ 1838  docker-compose down
+ 1839  clear
+ 1840  docker-compose up -d
+ 1841  docker-compose down
+ 1842  git pull origin dev_branch
+ 1843  sudo su
+ 1844  docker-compose up -d
+ 1845  clear
+ 1846  docker-compose exec mids env FLASK_APP=/w205/project-3-karthikrbabu/game_api.py flask run --host 0.0.0.0
+ 1847  cd w205/project-3-karthikrbabu/
+ 1848  docker-compose exec mids env FLASK_APP=/w205/project-3-karthikrbabu/game_api.py flask run --host 0.0.0.0
+ 1849  ls
+ 1850  docker-compose up -d
+ 1851  docker-compose exec mids env FLASK_APP=/w205/project-3-karthikrbabu/game_api.py flask run --host 0.0.0.0
+ 1852  clear
+ 1853  docker-compose exec spark env PYSPARK_DRIVER_PYTHON=jupyter PYSPARK_DRIVER_PYTHON_OPTS='notebook --no-browser --port 8890 --ip 0.0.0.0 --allow-root --notebook-dir=/w205/' pyspark
+ 1854  cd w205/project-3-karthikrbabu/
+ 1855  docker-compose exec mids env FLASK_APP=/w205/project-3-karthikrbabu/game_api.py flask run --host 0.0.0.0
+ 1856  clear
+ 1857  docker-compose exec mids env FLASK_APP=/w205/project-3-karthikrbabu/game_api.py flask run --host 0.0.0.0
+ 1858  cd w205/project-
+ 1859  cd w205/project-3-karthikrbabu/
+ 1860  cd w205/project-3-karthikrbabu/
+ 1861  ls
+ 1862  docker-compose exec spark spark-submit /w205/project-3-karthikrbabu/write_hive_table.py
+ 1863  cd w205/project-3-karthikrbabu/
+ 1864  docker-compose exec spark spark-submit /w205/project-3-karthikrbabu/write_events_stream.py
+ 1865  clear
+ 1866  docker-compose exec mids curl http://localhost:5000/purchase_sword
+ 1867  docker-compose exec mids curl http://localhost:5000/purchase_sword?metal=copper&power_level=100
+ 1868  docker-compose exec mids curl http://localhost:5000/join_a_guild?region=cali
+ 1869  docker-compose exec mids curl http://localhost:5000/purchase_sword?metal=copper&power_level='100'
+ 1870  docker-compose exec mids curl http://localhost:5000/purchase_sword?metal=copper
+ 1871  docker-compose exec mids curl 'http://localhost:5000/purchase_sword?metal=copper&power_level=100'
+ 1872  docker-compose exec mids curl 'http://localhost:5000/purchase_sword?metal=copper&power_level=100&magical=True'
+ 1873  clear
+ 1874  ls
+ 1875  sh basic_ab.sh 
+ 1876  clear
+ 1877  sh complex_ab_limit.sh 3
+ 1878  clear
+ 1879  ls
+ 1880  sh complex_ab_limit.sh 5
+ 1881  docker-compose exec spark spark-submit /w205/project-3-karthikrbabu/write_hive_table.py
+ 1882  clear
+ 1883  sh complex_ab_infinite.sh
+ 1884  docker-compose exec spark spark-submit /w205/project-3-karthikrbabu/write_hive_table.py
+ 1885  clear
+ 1886  sh complex_ab_limit.sh 15
+ 1887  docker-compose exec cloudera hadoop fs -ls /tmp/sword_purchases
+ 1888  docker-compose exec cloudera hadoop fs -ls /tmp/purchase_events
+ 1889  clear
+ 1890  docker-compose exec cloudera hadoop fs -ls /tmp/purchase_events
+ 1891  clear
+ 1892  docker-compose exec presto presto --server presto:8080 --catalog hive --schema default
+ 1893  clear
+ 1894  cd w205/project-3-karthikrbabu/
+ 1895  cd w205/project-3-karthikrbabu/
+ 1896  sh complex_ab_infinite.sh
+ 1897  clear
+ 1898  docker-compose exec spark spark-submit /w205/project-3-karthikrbabu/write_events_stream.py
+ 1899  cd w205/project-3-karthikrbabu/
+ 1900  docker-compose exec spark env PYSPARK_DRIVER_PYTHON=jupyter PYSPARK_DRIVER_PYTHON_OPTS='notebook --no-browser --port 8890 --ip 0.0.0.0 --allow-root --notebook-dir=/w205/' pyspark
+ 1901  clear
+ 1902  docker-compose exec spark env PYSPARK_DRIVER_PYTHON=jupyter PYSPARK_DRIVER_PYTHON_OPTS='notebook --no-browser --port 8890 --ip 0.0.0.0 --allow-root --notebook-dir=/w205/' pyspark
+ 1903  clear
+ 1904  docker-compose exec spark env PYSPARK_DRIVER_PYTHON=jupyter PYSPARK_DRIVER_PYTHON_OPTS='notebook --no-browser --port 8890 --ip 0.0.0.0 --allow-root --notebook-dir=/w205/' pyspark
+ 1905  cd w205/project-3-karthikrbabu/
+ 1906  ls
+ 1907  git status
+ 1908  git add .
+ 1909  git commit -m "working on final report"
+ 1910  git push dev_branch
+ 1911  git push origin dev_branch
+ 1912  clear
+ 1913  git status
+ 1914  git add .
+ 1915  git commit -m "working on final report"
+ 1916  git push origin dev_branch
+ 1917  git status
+ 1918  git add .
+ 1919  git commit -m "working on final report"
+ 1920  git push origin dev_branch
+ 1921  clear
+ 1922  git status
+ 1923  git diff write_hive_table.py 
+ 1924  clear
+ 1925  git add . "README updated, and cleanup of code"
+ 1926  git add .
+ 1927  git commit -m "README updated, and cleanup of code"
+ 1928  git status
+ 1929  git commit -m "updates"
+ 1930  sudo su
+ 1931  git status
+ 1932  git add .
+ 1933  git commit -m "updates to code comments"
+ 1934  git push origin dev_branch
+ 1935  clear
+ 1936  git add .
+ 1937  git status
+ 1938  sudo su
+ 1939  cler
+ 1940  clear
+ 1941  docker ps
+ 1942  docker-compose down
+ 1943  clear
+ 1944  docker-compose up -d
+ 1945  clear
+ 1946  docker-compose exec mids kafkacat -C -b kafka:29092 -t game_events -o beginning
+ 1947  clear
+ 1948  git status
+ 1949  sudo su
+ 1950  docker-compose down
+ 1951  clear
+ 1952  ls
+ 1953  docker-compose up -d
+ 1954  docker-compose exec mids kafkacat -C -b kafka:29092 -t game_events -o beginning
+ 1955  history > karthikrbabu-history.txt
+ 1956  clear
+ 1957  git status
+ 1958  git add .
+ 1959  sudo su
+ 1960  docker-compose exec mids kafkacat -C -b kafka:29092 -t game_events -o beginning
+ 1961  cler
+ 1962  clear
+ 1963  docker-compose exec mids kafkacat -C -b kafka:29092 -t game_events -o beginning
+ 1964  sudo su
+ 1965  git status
+ 1966  cd w205/project-3-karthikrbabu/
+ 1967  git status
+ 1968  git add .
+ 1969  sudo su
+ 1970  docker-compose exec mids curl 'http://localhost:5000/purchase_sword?metal=copper&power_level=100&magical=True'
+ 1971  cd w205/project-3-karthikrbabu/
+ 1972  docker-compose exec mids curl 'http://localhost:5000/purchase_sword?metal=copper&power_level=100&magical=True'
+ 1973  clear
+ 1974  docker-compose exec mids curl 'http://localhost:5000/purchase_sword?metal=copper&power_level=100&magical=True'
+ 1975  docker-compose exec spark spark-submit /w205/project-3-karthikrbabu/write_events_stream.py
+ 1976  clear
+ 1977  ls
+ 1978  docker-compose exec spark spark-submit /w205/project-3-karthikrbabu/write_events_stream.py
+ 1979  history > karthikrbabu-history.txt
