@@ -1,4 +1,4 @@
-# Project 3: Understanding User Behavior
+# Understanding User Behavior
 
 ### 07/30/2020 - Shyamkarthik Rameshbabu
 
